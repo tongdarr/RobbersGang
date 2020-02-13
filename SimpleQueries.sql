@@ -2,8 +2,7 @@
 SELECT BankName, Security FROM Banks
 WHERE City=’Chicago’ AND NoAccounts > 9000;
 
---Retrieve BankName of all banks where 
---Calamity Jane has an account. The answer should list every bank at most once.
+--Retrieve BankName of all banks where Calamity Jane has an account. The answer should list every bank at most once.
 SELECT DISTINCT BankName FROM HasAccounts
 LEFT JOIN Robbers ON HasAccounts.RobberId = Robbers.RobberId
 WHERE Robbers.Nickname = 'Calamity Jane';
